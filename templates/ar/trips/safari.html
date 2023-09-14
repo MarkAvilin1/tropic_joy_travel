@@ -1,0 +1,245 @@
+{% extends 'ar/base/sub-base.html' %}
+
+{% load static %}
+
+{% block title %} رحلة سيبو سفاري وحديقة المغامرات{% endblock %}
+
+{% block content %}
+
+<style>
+
+
+</style>
+
+<div
+    style="text-align:center;padding:50px;width:100%;background-image:url({% static 'imgs/offers/cebu1.jpg' %});margin-bottom:50px;
+background-repeat:no-repeat;background-size:cover;background-position:center;background-attachment:fixed;text-align:center;">
+    <p style="color:black;text-shadow:2px 2px 4px darkred;padding:25px;font-weight:900;font-size:2rem;">باقة سيبو سفاري
+        وحديقة المغامرات</p>
+    <div style="padding:30px;margin:0 auto;width:90%;padding:5px;background-color:rgba(256, 256, 256, 0.5);
+    border-radius:10px;text-shadow:0 1px 2px black;box-shadow:0px 2px 5px -1px black;">
+        <p style="padding:20px;text-align:left;font-size:1.4rem;">
+            <b> استكشف عجائب البرية في حزمة رحلات السفاري و حديقة المغامرات . في الجزء الشمالي من سيبو ، توجد أكبر حديقة
+                حيوانات في الفلبين. Cebu Safari and Adventure Park هي حديقة سفاري رئيسية تعرض حوالي 111 نوعًا من
+                الحيوانات في الوقت الحالي. </b>
+        </p>
+    </div>
+</div>
+
+<div class="container-gallery">
+
+    <div class="feature">
+        <div class="featured-item image-holder r-3-2 transition"></div>
+    </div>
+
+    <div class="gallery-wrapper">
+        <div class="gallery">
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 active transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="move-btn left">&larr;</button>
+        <button class="move-btn right">&rarr;</button>
+    </div>
+
+</div>
+
+
+<div style="padding:100px;font-size:1.2rem;" dir="rtl">
+
+    تعد حزمة رحلات السفاري هذه مثالية للترابط الأسري الذي سيثير بالتأكيد فضول الأطفال ومعرفتهم. <br>
+    مناطق الجذب السياحي Cebu Safari و Adventure Park.<br>
+    فلورا - حدائق العالم أنواعًا مختلفة من النباتات من جميع أنحاء العالم. <br>
+    فوانا - تتكون من 46 نوعًا من الطيور و 36 نوعًا من الثدييات المختلفة و 9 أنواع من الزواحف. <br>
+    Adventure Park - تقدم جولات متنوعة للباحثين عن المغامرة ، مثل ركوب ATV وخط zip ودراجة السماء. <br>
+    السافانا الأفريقية - شاهد العديد من الحيوانات البرية مثل الحمير الوحشية والظباء في موطنها.<br>
+    عرض الطيور - شاهد أنواعًا مختلفة من الطيور تؤدي الحيل وأظهر مواهبها على المسرح. <br>
+    تغذية الحيوانات - مراقبة حيوانات السفاري التي يتم اطعامها بواسطة حراس الحديقة. <br>
+    هناك مطاعم وأماكن لتناول الطعام متوفرة داخل الحديقة لملء معدتك أثناء الجولة. <br>
+    سيتم توفير وسائل نقل خاصة ومكيفة ، بما في ذلك النقل المجاني والتوصيل من والى مكان اقامتك .<br>
+    
+</div>
+
+
+
+<div style="padding:0 100px;text-align:left;">
+    <p style="font-size:1.5rem;font-weight:bold;">الاسعار</p>
+    <table>
+        <tr>
+            <th>الاشخاص</th>
+            <th>السعر</th>
+        </tr>
+        <tr>
+            <td>شخص بالغ</td>
+            <td>₱6000</td>
+        </tr>
+        <tr>
+            <td>شخصان</td>
+            <td>₱7500</td>
+        </tr>
+        <tr>
+            <td>اكثر من شخصان</td>
+            <td>+₱1000</td>
+        </tr>
+    </table>
+    <a href="{% url 'contact_ar' %}" class="btn-sky">احجز الان</a>
+</div>
+
+
+<script>
+    var gallery = document.querySelector('.gallery');
+    var galleryItems = document.querySelectorAll('.gallery-item');
+    var numOfItems = gallery.children.length;
+    var itemWidth = 23; // percent: as set in css
+
+    var featured = document.querySelector('.featured-item');
+
+    var leftBtn = document.querySelector('.move-btn.left');
+    var rightBtn = document.querySelector('.move-btn.right');
+    var leftInterval;
+    var rightInterval;
+
+    var scrollRate = 0.2;
+    var left;
+
+    function selectItem(e) {
+        if (e.target.classList.contains('active')) return;
+
+        featured.style.backgroundImage = e.target.style.backgroundImage;
+
+        for (var i = 0; i < galleryItems.length; i++) {
+            if (galleryItems[i].classList.contains('active'))
+                galleryItems[i].classList.remove('active');
+        }
+
+        e.target.classList.add('active');
+    }
+
+    function galleryWrapLeft() {
+        var first = gallery.children[0];
+        gallery.removeChild(first);
+        gallery.style.left = -itemWidth + '%';
+        gallery.appendChild(first);
+        gallery.style.left = '0%';
+    }
+
+    function galleryWrapRight() {
+        var last = gallery.children[gallery.children.length - 1];
+        gallery.removeChild(last);
+        gallery.insertBefore(last, gallery.children[0]);
+        gallery.style.left = '-23%';
+    }
+
+    function moveLeft() {
+        left = left || 0;
+
+        leftInterval = setInterval(function () {
+            gallery.style.left = left + '%';
+
+            if (left > -itemWidth) {
+                left -= scrollRate;
+            } else {
+                left = 0;
+                galleryWrapLeft();
+            }
+        }, 1);
+    }
+
+    function moveRight() {
+        //Make sure there is element to the leftd
+        if (left > -itemWidth && left < 0) {
+            left = left - itemWidth;
+
+            var last = gallery.children[gallery.children.length - 1];
+            gallery.removeChild(last);
+            gallery.style.left = left + '%';
+            gallery.insertBefore(last, gallery.children[0]);
+        }
+
+        left = left || 0;
+
+        leftInterval = setInterval(function () {
+            gallery.style.left = left + '%';
+
+            if (left < 0) {
+                left += scrollRate;
+            } else {
+                left = -itemWidth;
+                galleryWrapRight();
+            }
+        }, 1);
+    }
+
+    function stopMovement() {
+        clearInterval(leftInterval);
+        clearInterval(rightInterval);
+    }
+
+    leftBtn.addEventListener('mouseenter', moveLeft);
+    leftBtn.addEventListener('mouseleave', stopMovement);
+    rightBtn.addEventListener('mouseenter', moveRight);
+    rightBtn.addEventListener('mouseleave', stopMovement);
+
+
+    //Start this baby up
+    (function init() {
+        var images = [
+            "{% static 'imgs/offers/safari.jpeg' %}",
+            "{% static 'imgs/offers/safari1.jpg' %}",
+            "{% static 'imgs/offers/safari2.jpg' %}",
+            "{% static 'imgs/offers/safari3.jpg' %}",
+            "{% static 'imgs/offers/safari4.jpg' %}",
+            "{% static 'imgs/offers/safari5.jpg' %}",
+            "{% static 'imgs/offers/safari6.jpg' %}",
+            "{% static 'imgs/offers/safari7.jpg' %}",
+            "{% static 'imgs/offers/safari8.jpg' %}",
+            "{% static 'imgs/offers/safari9.jpg' %}",
+            "{% static 'imgs/offers/safari10.jpg' %}",
+            "{% static 'imgs/offers/safari11.jpg' %}",
+        ];
+
+        //Set Initial Featured Image
+        featured.style.backgroundImage = 'url(' + images[0] + ')';
+
+        //Set Images for Gallery and Add Event Listeners
+        for (var i = 0; i < galleryItems.length; i++) {
+            galleryItems[i].style.backgroundImage = 'url(' + images[i] + ')';
+            galleryItems[i].addEventListener('click', selectItem);
+        }
+    })();
+
+
+
+</script>
+
+{% endblock %}

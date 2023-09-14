@@ -1,0 +1,234 @@
+{% extends 'en/base/base.html' %}
+{% load static %}
+{% block title %}Tropic Joy Travel{% endblock %}
+{% block content %}
+<!-- Page Header -->
+<header class="header">
+    <div class="overlay">
+        <h6 class="subtitle">Your Ideal Vacation Is Our Priority</h6>
+        <h1 class="title" style="font-family:cursive;font-weight:900;">Tropic Joy Travel</h1>
+        <div class="buttons text-center">
+            <a href="#service" class="btn btn-primary rounded w-lg btn-lg my-1">Our Service</a>
+            <a href="{% url 'contact_en' %}" class="btn btn-outline-light rounded w-lg btn-lg my-1">Contact Us</a>
+        </div>
+    </div>
+</header>
+<!-- End Of Page Header -->
+
+<!-- Box -->
+<div class="box text-center">
+    <div class="box-item">
+        <a href="{% url 'pickup_en' %}">
+            <img src="{% static 'imgs/transport.png' %}" alt="Tropic Joy" style="max-height:60px;" class="m-2">
+
+            <h5 class="box-title">Pickup (Transport)</h5>
+        </a>
+        <p>Pickup from the airport, hotels, or from everywhere, you can be always calm about the transport with
+            us!</p>
+
+    </div>
+    <div class="box-item">
+        <a href="{% url 'trips_en' %}">
+            <img src="{% static 'imgs/trips.png' %}" alt="Tropic Joy" style="max-height:60px;" class="m-2">
+
+            <h5 class="box-title">Tour Trips</h5>
+        </a>
+        <p>You can choose your destination, or book one of our destinations. We can offer you the best services and
+            prices!</p>
+
+    </div>
+    <div class="box-item">
+        <a href="{% url 'other_en' %}">
+            <img src="{% static 'imgs/travel.png' %}" alt="Tropic Joy" style="max-height:60px;" class="m-2">
+
+            <h5 class="box-title">Other services</h5>
+        </a>
+        <p>We can help you with anything you need in Cebu city or other places in the Philippines</p>
+
+    </div>
+</div>
+<!-- End of Box -->
+
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-5 col-lg-4">
+                <img src="{% static 'imgs/banner/sea.png' %}" alt="Tropic Joy Travel"
+                     class="w-100 img-thumbnail mb-3">
+            </div>
+            <div class="col-md-7 col-lg-8">
+                <h6 class="section-subtitle mb-0">About Us</h6>
+                <h6 class="section-title mb-3">Tropic Joy Travel</h6>
+                <p>Tropic Joy Travel for tourism services, we have a talented people who can make your vacation an
+                    ideal.</p>
+                <p>Also we provide privet trips, that you can choose your destination, just tell us about your plan, we
+                    will do it for you. </p>
+                <p>In Tropic Joy Travel we can help you with any different cases you need, like rent places for living,
+                    rent cars, translate, we're providing 4 languages (Tagalog, English, Russian, Arabic).</p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of About Section -->
+
+
+<!-- Service Section -->
+<section id="service">
+    <div class="container">
+        <h6 class="section-subtitle text-center">Makes Happen</h6>
+        <h5 class="section-title text-center mb-6">Our Service</h5>
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4"><img src="{% static 'imgs/transport.png' %}" alt="Tropic Joy"
+                                              style="max-height:60px;" class="m-2"></h2>
+                        <h6 class="card-title">Pickup (Transport)</h6>
+                        <p>Pickup from the airport, hotels, or from everywhere, you can be always calm about the
+                            transport with us!</p>
+                        <a href="{% url 'pickup_en' %}" class="btn btn-info">More details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4"><img src="{% static 'imgs/trips.png' %}" alt="Tropic Joy"
+                                              style="max-height:60px;" class="m-2"></h2>
+                        <h6 class="card-title">Tour Trips</h6>
+                        <p>You can choose your destination, or book one of our destinations. We can offer you the best
+                            services and prices!</p>
+                        <a href="{% url 'trips_en' %}" class="btn btn-info">More details</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4"><img src="{% static 'imgs/travel.png' %}" alt="Tropic Joy"
+                                              style="max-height:60px;" class="m-2"></h2>
+                        <h6 class="card-title">Other services</h6>
+                        <p>We can help you with anything you need in Cebu city or other places in Cebu and all the
+                            Philippines!</p>
+                        <a href="{% url 'other_en' %}" class="btn btn-info">More details</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Service Section -->
+
+<!--    Own trips section-->
+
+<section id="own_trip" class="jumbotron bg-light">
+
+    <div class="container">
+        <h2>PLan Your Own Trip</h2>
+
+        <div class="card-group">
+            <div class="card">
+                <img src="{% static 'imgs/offers/oslob3.jpg' %}" class="card-img-top" alt="...">
+            </div>
+            <div class="card">
+                <img src="{% static 'imgs/offers/tourin8.jpg' %}" class="card-img-top" alt="...">
+            </div>
+            <div class="card">
+                <img src="{% static 'imgs/offers/tourin9.jpg' %}" class="card-img-top" alt="...">
+            </div>
+            <div class="card">
+                <img src="{% static 'imgs/offers/tourin10.jpg' %}" class="card-img-top" alt="...">
+            </div>
+        </div>
+        <p class="m-5">
+            With us in Tropic Joy Travel you can plane and book your on trip, in Cebu or other places of the
+            Philippines, don't
+            worry about anything, we can take care of everything since you arrive to the Philippines, until telling
+            goodbye in the
+            airport :)
+            Just write us, and we'll contact you shortly!
+        </p>
+        <a href="/contact" class="btn btn-info">Contact Us</a>
+    </div>
+</section>
+
+<!--    end of Own trips section-->
+
+<!--    trips section-->
+
+<section id="trips" class="jumbotron bg-white">
+
+    <div class="container">
+        <h2>Choose Your Trip</h2>
+
+        <div class="card mb-3" style="max-width:100%;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{% static 'imgs/offers/cebu.jpg' %}" class="img-fluid rounded-start" alt="City Tour">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Cebu City Tour (Full Day)</h5>
+                        <p class="card-text">This tour brings you to various heritage sites and hillside.
+                            The Cebu City Tour sample itinerary includes visiting notable spots that have
+                            defined Cebu’s history in the morning. Then, in the afternoon, the Cebu City
+                            tour package consists of moving to the top part of Cebu.
+                        </p>
+                        <a href="{% url 'city_en' %}" class="btn btn-info">More details</a>
+                        <a href="{% url 'contact_en' %}" class="btn btn-info">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 pt-1">
+                    <img src="{% static 'imgs/offers/kawasan1.jpg' %}" class="img-fluid rounded-start" alt="Kawasan">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Whale Shark Swimming & Kawasan Falls Canyoneering (Full Day)</h5>
+                        <p class="card-text">This adventure will make you appreciate the beauty of nature from
+                            swimming with the whale sharks and the greenery of the surroundings along and around
+                            Kawasan falls.
+                        </p>
+                        <a href="{% url 'kawasan_en' %}" class="btn btn-info">More details</a>
+                        <a href="{% url 'contact_en' %}" class="btn btn-info">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 pt-1">
+                    <img src="{% static 'imgs/offers/safari6.jpg' %}" class="img-fluid rounded-start" alt="Safari">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Cebu Safari and Adventure Park (Full Day)</h5>
+                        <p class="card-text">This tour brings you to various heritage sites and hillside.
+                            The Cebu City Tour sample itinerary includes visiting notable spots that have
+                            defined Cebu’s history in the morning. Then, in the afternoon, the Cebu City
+                            tour package consists of moving to the top part of Cebu.
+                        </p>
+                        <a href="{% url 'safari_en' %}" class="btn btn-info">More details</a>
+                        <a href="{% url 'contact_en' %}" class="btn btn-info">Contact Us</a>
+                    </div>
+                </div>
+                <div class="col-md-4 pt-1">
+                    <img src="{% static 'imgs/offers/hopping7.jpg' %}" class="img-fluid rounded-start" alt="Hopping">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">Island Hopping with Lunch (Full Day)</h5>
+                        <p class="card-text">This tour brings you to various heritage sites and hillside.
+                            The Cebu City Tour sample itinerary includes visiting notable spots that have
+                            defined Cebu’s history in the morning. Then, in the afternoon, the Cebu City
+                            tour package consists of moving to the top part of Cebu.
+                        </p>
+                        <a href="{% url 'hopping_en' %}" class="btn btn-info">More details</a>
+                        <a href="{% url 'contact_en' %}" class="btn btn-info">Contact Us</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--    end of trips section-->
+
+
+{% endblock %}

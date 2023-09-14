@@ -1,0 +1,33 @@
+{% extends 'ar/base/sub-base.html' %}
+
+{% load static %}
+
+{% block title %}  الخدمات الاخرى {% endblock %}
+
+{% block content %}
+
+<div style="text-align:center;padding:50px;width:100%;background-image:url({% static 'imgs/offers/cebu1.jpg' %});margin-bottom:50px;
+background-repeat:no-repeat;background-size:cover;background-position:center;background-attachment:fixed;text-align:center;">
+    <p style="color:black;text-shadow:2px 2px 4px white;padding:25px;font-weight:900;font-size:2rem;">خدماتنا الاخرى</p>
+    <div style="padding:30px;margin:0 auto;width:90%;padding:5px;background-color:rgba(256, 256, 256, 0.5);
+    border-radius:10px;text-shadow:0 1px 2px black;box-shadow:0px 2px 5px -1px black;">
+        <p style="padding:20px;text-align:left;font-size:1.4rem;">
+            <b> نقدم لكم خدمات خاصة حسب احتياجاتكم , ما عليكم سوى التواصل معنا</b>
+        </p>
+    </div>
+</div>
+
+<div style="padding:100px;" class="other">
+<h1></h1>
+<h2>خدماتنا الاخرى تشمل : </h2>
+<p>- المساعدة في استاجر وشراء الاماكن الخاصة بالمعيشة للفترات الطويلة و القصيرة .</p>
+<p>- المساعدة في الترجمة من و الى اللغات (الفلبينية , العربية , الانكليزية , الروسية)</p>
+<p>- استحصال الدعوات السياحية . </p>
+<p>- المساعدة في تمديد الاقامة داخل الاراضي الفلبينية .</p>
+<p>- المساعدة في عمل المشاريع التجارية و الاستثمار .</p>
+<p style="margin-bottom:30px;">- الخدمات الاستشرية .</p>
+
+    <a href="{% url 'contact_ar' %}"  class="btn-sky">تواصل معنا</a>
+
+</div>
+{% endblock %}

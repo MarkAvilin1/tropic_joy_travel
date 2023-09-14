@@ -1,0 +1,78 @@
+{% extends 'ar/base/base.html' %}
+
+{% load static %}
+
+{% block title %} الرحلات السياحية {% endblock %}
+
+{% block content %}
+
+<section id="trips" class="jumbotron bg-white mt-5" dir="rtl">
+
+    <div class="container">
+        <h2>اختر رحلتك السياحية</h2>
+
+        <div class="card mb-3" style="max-width:100%;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{% static 'imgs/offers/cebu.jpg' %}" class="img-fluid rounded-start" alt="City Tour">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">رحلة مدينة سيبو (يوم كامل)</h5>
+                        <p class="card-text">تنقلك هذه الجولة إلى العديد من المواقع التراثية والتلال. يتضمن نموذج مسار
+                            الرحلة في مدينة سيبو زيارة المواقع البارزة التي حددت تاريخ سيبو في الصباح. ثم ، في فترة ما
+                            بعد الظهر ، تتكون حزمة جولة مدينة سيبو من الانتقال إلى الجزء العلوي من سيبو.
+                        </p>
+                        <a href="{% url 'city_ar' %}" class="btn btn-info">المزيد...</a>
+                        <a href="{% url 'contact_ar' %}" class="btn btn-info">تواصل معنا</a>
+                    </div>
+                </div>
+                <div class="col-md-4 pt-1">
+                    <img src="{% static 'imgs/offers/kawasan1.jpg' %}" class="img-fluid rounded-start" alt="Kawasan">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">السباحة مع قرش الحوت والتنزه في شلالات كاواسان (يوم كامل)</h5>
+                        <p class="card-text">ستجعلك هذه المغامرة تقدر جمال الطبيعة من السباحة مع أسماك قرش الحوت
+                            والمساحات الخضراء المحيطة على طول شلالات Kawasan وحولها.
+                        </p>
+                        <a href="{% url 'kawasan_ar' %}" class="btn btn-info">المزيد...</a>
+                        <a href="{% url 'contact_ar' %}" class="btn btn-info">تواصل معنا</a>
+                    </div>
+                </div>
+                <div class="col-md-4 pt-1">
+                    <img src="{% static 'imgs/offers/safari6.jpg' %}" class="img-fluid rounded-start" alt="Safari">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">رحلة سيبو سفاري و متنزه المغامرة (يوم كامل)</h5>
+                        <p class="card-text">استكشف عجائب البرية في حزمة رحلات السفاري و حديقة المغامرات . في الجزء
+                            الشمالي من سيبو ، توجد أكبر حديقة
+                            حيوانات في الفلبين. Cebu Safari and Adventure Park هي حديقة سفاري رئيسية تعرض حوالي 111
+                            نوعًا من
+                            الحيوانات في الوقت الحالي.
+                        </p>
+                        <a href="{% url 'safari_ar' %}" class="btn btn-info">المزيد...</a>
+                        <a href="{% url 'contact_ar' %}" class="btn btn-info">تواصل معنا</a>
+                    </div>
+                </div>
+                <div class="col-md-4 pt-1">
+                    <img src="{% static 'imgs/offers/hopping7.jpg' %}" class="img-fluid rounded-start" alt="Hopping">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">زيارة الجزر السياحية مع وجبة غداء (يوم كامل)</h5>
+                        <p class="card-text">خذ يومًا لاستكشاف جزر سيبو الجميلة في هذه الجولة من مدينة سيبو. قفز من
+                            جزيرة إلى أخرى في قاربنا المريح ،
+                            مع متسع من الوقت للاستمتاع بالمناظر الطبيعية الجميلة والمياه الصافية والطعام المحلي اللذيذ
+                        </p>
+                        <a href="{% url 'hopping_ar' %}" class="btn btn-info">المزيد...</a>
+                        <a href="{% url 'contact_ar' %}" class="btn btn-info">تواصل معنا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

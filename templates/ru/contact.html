@@ -1,0 +1,81 @@
+{% extends 'en/base/base.html' %}
+{% load static %}
+{% block title %}Contact Us{% endblock %}
+{% block content %}
+
+<!-- Contact Section -->
+<section id="contact">
+    <div class="container mt-5">
+        <div class="contact-card">
+            <div class="infos">
+                <h6 class="section-subtitle">Get Here</h6>
+                <h6 class="section-title mb-4">Contact Us</h6>
+
+                <div class="item">
+                    <img src="{% static 'imgs/logo/address.png' %}" alt="Address"
+                         style="max-width:30px;max-height:30px;margin-right:15px;">
+                    <div class="">
+                        <h5>Location</h5>
+                        <p> The Philippines, Cebu</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'imgs/logo/wa.png' %}" alt="Address" style="max-width:30px;max-height:30px;margin-right:15px;">
+                    <div>
+                        <h5>Phone Number</h5>
+                        <a href="https://wa.me/message/MBTZZNPUOPJTJ1 "><p>+63 939 695 9716</p></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'imgs/logo/email.png' %}" alt="Address" style="max-width:30px;max-height:30px;margin-right:15px;">
+                    <div class="mb-0">
+                        <h5>Email Address</h5>
+                        <a href="emailto:tropicjoytravel@gmail.com"><p>tropicjoytravel@gmail.com</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <h6 class="section-subtitle">Available 24/7</h6>
+                {% if success_msg != '' %}
+                <div class="alert alert-success p-2" id="success" role="alert">
+                    <p>{{ success_msg }}</p>
+                </div>
+                {% endif %}
+                <h6 class="section-title mb-4">Get In Touch</h6>
+                <form method="post" action="{% url 'contact_en' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" id="exampleInputPassword1"
+                               placeholder="Full Name" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1"
+                               aria-describedby="emailHelp" placeholder="Enter your mail" name="email"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control form-control-lg" id="exampleInputEmail2"
+                               aria-describedby="emailHelp" placeholder="Enter Whatsapp number" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="" cols="30" rows="7" class="form-control form-control-lg"
+                                  placeholder="Message"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg mt-3">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+
+
+<script>
+      setTimeout(() => {
+      const box = document.querySelector('.alert-success');
+      box.style.display = 'none';
+    }, 10000);
+</script>
+
+
+{% endblock %}

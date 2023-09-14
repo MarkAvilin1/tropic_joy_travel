@@ -1,0 +1,240 @@
+{% extends 'ar/base/sub-base.html' %}
+
+{% load static %}
+
+{% block title %} شلالات كاواسان {% endblock %}
+
+{% block content %}
+
+<style>
+
+
+</style>
+
+<div style="text-align:center;padding:50px;width:100%;background-image:url({% static 'imgs/offers/kawasan1.jpg' %});margin-bottom:50px;
+background-repeat:no-repeat;background-size:cover;background-position:center;background-attachment:fixed;text-align:center;"
+    dir="rtl">
+    <p style="color:black;text-shadow:2px 2px 4px white;padding:25px;font-weight:900;font-size:2rem;">السباحة مع حيتان
+        القرش و زيارة شلالات كاواسان</p>
+    <div style="padding:30px;margin:0 auto;width:90%;padding:5px;background-color:rgba(256, 256, 256, 0.5);
+    border-radius:10px;text-shadow:0 1px 2px black;box-shadow:0px 2px 5px -1px black;">
+        <p style="padding:20px;text-align:left;font-size:1.4rem;">
+            <b> إنها جولة خاصة ، مع خدمة التوصيل من وإلى الفندق في أي فندق في مدينة سيبو وماكتان ولابو لابو ومطار
+                ماكتان</b>
+        </p>
+    </div>
+</div>
+
+<div class="container-gallery">
+
+    <div class="feature">
+        <div class="featured-item image-holder r-3-2 transition"></div>
+    </div>
+
+    <div class="gallery-wrapper">
+        <div class="gallery">
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 active transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="move-btn left">&larr;</button>
+        <button class="move-btn right">&rarr;</button>
+    </div>
+
+</div>
+
+
+<div style="padding:100px;font-size:1.2rem;" dir="rtl">
+
+    تشتهر شلالات Kawasan بمياهها الفيروزية الجميلة ، وتحتوي الشلالات على شلالين رئيسيين مع حمامات سباحة طبيعية عميقة
+    مثالية للسباحة والقفز على الجرف. يحتوي المستوى الأول على ارتفاع 40 مترًا تقريبًا من المياه المتسلسلة بينما يحتوي
+    المستوى الثاني ، الأقل ازدحامًا ، على شلال بطول 20 مترًا تقريبًا ويمكن الوصول إليه في غضون عشر دقائق من الرحلات من
+    المستوى الأول.
+    <br>
+    تعد جولة مشاهدة حوت القرش وشلالات Kawasan مناسبة للأشخاص الأقل مغامرة والذين اختاروا عدم القيام بجولة التجديف.
+    ستجعلك هذه المغامرة تقدر جمال الطبيعة من السباحة مع أسماك حوت القرش والمساحات الخضراء المحيطة على طول الشلالات Kawasan
+    وحولها.
+
+</div>
+
+
+<div style="padding:0 100px;text-align:left;">
+    <p style="font-size:4vh;font-weight:bold;">الاسعار</p>
+    <table style="margin:20px">
+        <tr>
+            <th>الاشخاص</th>
+            <th>السعر</th>
+        </tr>
+        <tr>
+            <td>شخص بالغ</td>
+            <td>₱7000</td>
+        </tr>
+        <tr>
+            <td>شخصان</td>
+            <td>₱10000</td>
+        </tr>
+        <tr>
+            <td>اكثر من شخصان</td>
+            <td>+₱1000</td>
+        </tr>
+    </table>
+    <a href="{% url 'contact_ar' %}" class="btn-sky">احجز الان</a>
+</div>
+
+<script>
+    var gallery = document.querySelector('.gallery');
+    var galleryItems = document.querySelectorAll('.gallery-item');
+    var numOfItems = gallery.children.length;
+    var itemWidth = 23; // percent: as set in css
+
+    var featured = document.querySelector('.featured-item');
+
+    var leftBtn = document.querySelector('.move-btn.left');
+    var rightBtn = document.querySelector('.move-btn.right');
+    var leftInterval;
+    var rightInterval;
+
+    var scrollRate = 0.2;
+    var left;
+
+    function selectItem(e) {
+        if (e.target.classList.contains('active')) return;
+
+        featured.style.backgroundImage = e.target.style.backgroundImage;
+
+        for (var i = 0; i < galleryItems.length; i++) {
+            if (galleryItems[i].classList.contains('active'))
+                galleryItems[i].classList.remove('active');
+        }
+
+        e.target.classList.add('active');
+    }
+
+    function galleryWrapLeft() {
+        var first = gallery.children[0];
+        gallery.removeChild(first);
+        gallery.style.left = -itemWidth + '%';
+        gallery.appendChild(first);
+        gallery.style.left = '0%';
+    }
+
+    function galleryWrapRight() {
+        var last = gallery.children[gallery.children.length - 1];
+        gallery.removeChild(last);
+        gallery.insertBefore(last, gallery.children[0]);
+        gallery.style.left = '-23%';
+    }
+
+    function moveLeft() {
+        left = left || 0;
+
+        leftInterval = setInterval(function () {
+            gallery.style.left = left + '%';
+
+            if (left > -itemWidth) {
+                left -= scrollRate;
+            } else {
+                left = 0;
+                galleryWrapLeft();
+            }
+        }, 1);
+    }
+
+    function moveRight() {
+        //Make sure there is element to the leftd
+        if (left > -itemWidth && left < 0) {
+            left = left - itemWidth;
+
+            var last = gallery.children[gallery.children.length - 1];
+            gallery.removeChild(last);
+            gallery.style.left = left + '%';
+            gallery.insertBefore(last, gallery.children[0]);
+        }
+
+        left = left || 0;
+
+        leftInterval = setInterval(function () {
+            gallery.style.left = left + '%';
+
+            if (left < 0) {
+                left += scrollRate;
+            } else {
+                left = -itemWidth;
+                galleryWrapRight();
+            }
+        }, 1);
+    }
+
+    function stopMovement() {
+        clearInterval(leftInterval);
+        clearInterval(rightInterval);
+    }
+
+    leftBtn.addEventListener('mouseenter', moveLeft);
+    leftBtn.addEventListener('mouseleave', stopMovement);
+    rightBtn.addEventListener('mouseenter', moveRight);
+    rightBtn.addEventListener('mouseleave', stopMovement);
+
+
+    //Start this baby up
+    (function init() {
+        var images = [
+            "{% static 'imgs/offers/kawasan1.jpg' %}",
+            "{% static 'imgs/offers/oslob1.jpg' %}",
+            "{% static 'imgs/offers/kawasan2.jpg' %}",
+            "{% static 'imgs/offers/oslob2.jpg' %}",
+            "{% static 'imgs/offers/kawasan3.jpg' %}",
+            "{% static 'imgs/offers/oslob3.jpg' %}",
+            "{% static 'imgs/offers/kawasan4.jpg' %}",
+            "{% static 'imgs/offers/oslob4.jpg' %}",
+            "{% static 'imgs/offers/kawasan5.jpg' %}",
+            "{% static 'imgs/offers/oslob5.jpg' %}",
+            "{% static 'imgs/offers/kawasan6.jpg' %}",
+            "{% static 'imgs/offers/oslob6.jpg' %}",
+        ];
+
+        //Set Initial Featured Image
+        featured.style.backgroundImage = 'url(' + images[0] + ')';
+
+        //Set Images for Gallery and Add Event Listeners
+        for (var i = 0; i < galleryItems.length; i++) {
+            galleryItems[i].style.backgroundImage = 'url(' + images[i] + ')';
+            galleryItems[i].addEventListener('click', selectItem);
+        }
+    })();
+
+
+
+</script>
+
+{% endblock %}

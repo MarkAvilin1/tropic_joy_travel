@@ -1,0 +1,222 @@
+{% extends 'ar/base/base.html' %}
+{% load static %}
+{% block title %}تروبيك جوي تريفل{% endblock %}
+{% block content %}
+<!-- Page Header -->
+<header class="header">
+    <div class="overlay">
+        <h6 class="subtitle">رحلتك المثالية هي اولوية لنا</h6>
+        <h1 class="title" style="font-family:cursive;font-weight:900;">تروبيك جوي تريفل</h1>
+        <div class="buttons text-center">
+            <a href="#service" class="btn btn-primary rounded w-lg btn-lg my-1">خدماتنا</a>
+            <a href="{% url 'contact_ar' %}" class="btn btn-outline-light rounded w-lg btn-lg my-1">تواصل معنا</a>
+        </div>
+    </div>
+</header>
+<!-- End Of Page Header -->
+
+<!-- Box -->
+<div class="box text-center">
+    <div class="box-item">
+        <a href="{% url 'pickup_ar' %}">
+            <img src="{% static 'imgs/transport.png' %}" alt="Tropic Joy" style="max-height:60px;" class="m-2">
+
+            <h5 class="box-title">خدمات النقل و المواصلات</h5>
+        </a>
+        <p>النقل من المطار والفنادق أو من أي مكان الى اي مكان ، يمكنك دائمًا أن تكون مطمئنا بشأن النقل معنا!</p>
+
+    </div>
+    <div class="box-item">
+        <a href="{% url 'trips_ar' %}">
+            <img src="{% static 'imgs/trips.png' %}" alt="Tropic Joy" style="max-height:60px;" class="m-2">
+
+            <h5 class="box-title">الرحلات السياحية</h5>
+        </a>
+        <p>يمكنك اختيار رحلتك الخاصة أو حجز إحدى رحلاتنا السياحية . نحن نقدم لك أفضل الخدمات والأسعار!</p>
+
+    </div>
+    <div class="box-item">
+        <a href="{% url 'other_ar' %}">
+            <img src="{% static 'imgs/travel.png' %}" alt="Tropic Joy" style="max-height:60px;" class="m-2">
+
+            <h5 class="box-title">خدماتنا الاخرى</h5>
+        </a>
+        <p> يمكننا مساعدتك في أي شيء تحتاجه في مدينة سيبو أو أماكن أخرى في الفلبين</p>
+
+    </div>
+</div>
+<!-- End of Box -->
+
+<!-- About Section -->
+<section id="about">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-md-5 col-lg-4">
+                <img src="{% static 'imgs/banner/sea.png' %}" alt="Tropic Joy Travel" class="w-100 img-thumbnail mb-3">
+            </div>
+            <div class="col-md-7 col-lg-8" style="text-align:right;">
+                <h6 class="section-subtitle mb-0">عنــا</h6>
+                <h6 class="section-title mb-3">تروبيك جوي تريفل</h6>
+                <p>تروبيك جوي ترفيل للخدمات السياحية ، لدينا أشخاص موهوبون يمكنهم جعل عطلتك مثالية.</p>
+                <p>كما نقدم رحلات خاصة ، بحيث يمكنك اختيار وجهتك ، فقط أخبرنا عن خطتك ، وسنفعل ذلك من أجلك.</p>
+                <p> في تروبيك جوي تريفل , يمكننا المساعدة في مختلف الامور الاخرى في مدينة سيبو و الفلبين عامة , مثل
+                    استئجار الاماكن للمعيشة الطويلة و القصيرة , استصدار الدعوات السياحية و الترجمة من والى عدة لغات
+                    (اللغة الفلبينية , العربية , الروسية , الانكليزية)
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of About Section -->
+
+
+<!-- Service Section -->
+<section id="service">
+    <div class="container">
+        <h6 class="section-subtitle text-center">لتفعلها الان</h6>
+        <h5 class="section-title text-center mb-6">خدماتنا</h5>
+        <div class="row">
+            <div class="col-sm-4 col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4"><img src="{% static 'imgs/transport.png' %}" alt="Tropic Joy"
+                                style="max-height:60px;" class="m-2"></h2>
+                        <h6 class="card-title">المواصلات</h6>
+                        <p>النقل من المطار والفنادق أو من أي مكان الى اي مكان ، يمكنك دائمًا أن تكون مطمئنا بشأن النقل
+                            معنا!</p>
+                        <a href="{% url 'pickup_ar' %}" class="btn btn-info">المزيد...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4"><img src="{% static 'imgs/trips.png' %}" alt="Tropic Joy"
+                                style="max-height:60px;" class="m-2"></h2>
+                        <h6 class="card-title">رحلات سياحية</h6>
+                        <p>يمكنك اختيار رحلتك الخاصة أو حجز إحدى رحلاتنا السياحية . نحن نقدم لك أفضل الخدمات والأسعار!
+                        </p>
+                        <a href="{% url 'trips_ar' %}" class="btn btn-info">المزيد...</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-4 col-md-4">
+                <div class="card mb-4">
+                    <div class="card-body">
+                        <h2 class="mb-4"><img src="{% static 'imgs/travel.png' %}" alt="Tropic Joy"
+                                style="max-height:60px;" class="m-2"></h2>
+                        <h6 class="card-title">خدماتنا الاخرى</h6>
+                        <p>يمكننا مساعدتك في أي شيء تحتاجه في مدينة سيبو أو أماكن أخرى في الفلبين</p>
+                        <a href="/contact" class="btn btn-info">المزيد...</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End of Service Section -->
+
+<!--    Own trips section-->
+
+<section id="own_trip" class="jumbotron bg-light">
+
+    <div class="container">
+        <h2>خطط رحلتك الخاصة معنا</h2>
+
+        <div class="card-group">
+            <div class="card">
+                <img src="{% static 'imgs/offers/oslob3.jpg' %}" class="card-img-top" alt="...">
+            </div>
+            <div class="card">
+                <img src="{% static 'imgs/offers/tourin8.jpg' %}" class="card-img-top" alt="...">
+            </div>
+            <div class="card">
+                <img src="{% static 'imgs/offers/tourin9.jpg' %}" class="card-img-top" alt="...">
+            </div>
+            <div class="card">
+                <img src="{% static 'imgs/offers/tourin10.jpg' %}" class="card-img-top" alt="...">
+            </div>
+        </div>
+        <p class="m-5">
+            معنا في تروبيك جوي ترافل ، يمكنك الطيران وحجز رحلتك ، في سيبو أو أماكن أخرى في الفلبين ، لا تقلق بشأن أي شيء
+            ، يمكننا الاهتمام بكل شيء منذ وصولك إلى الفلبين ، حتى توديعك في المطار :)
+            فقط اكتب لنا وسنتصل بك قريبًا!
+        </p>
+        <a href="/contact" class="btn btn-info">تواصل معنا</a>
+    </div>
+</section>
+
+<!--    end of Own trips section-->
+
+<!--    trips section-->
+
+<section id="trips" class="jumbotron bg-white">
+
+    <div class="container">
+        <h2>اختر رحلتك السياحية</h2>
+
+        <div class="card mb-3" style="max-width:100%;">
+            <div class="row g-0">
+                <div class="col-md-4">
+                    <img src="{% static 'imgs/offers/cebu.jpg' %}" class="img-fluid rounded-start" alt="City Tour">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">رحلة مدينة سيبو (يوم كامل)</h5>
+                        <p class="card-text">تنقلك هذه الجولة إلى العديد من المواقع التراثية والتلال. يتضمن نموذج مسار
+                            الرحلة في مدينة سيبو زيارة المواقع البارزة التي حددت تاريخ سيبو في الصباح. ثم ، في فترة ما
+                            بعد الظهر ، تتكون حزمة جولة مدينة سيبو من الانتقال إلى الجزء العلوي من سيبو.
+                        </p>
+                        <a href="{% url 'city_ar' %}" class="btn btn-info">المزيد...</a>
+                        <a href="{% url 'contact_ar' %}" class="btn btn-info">تواصل معنا</a>
+                    </div>
+                </div>
+                <div class="col-md-4 pt-1">
+                    <img src="{% static 'imgs/offers/kawasan1.jpg' %}" class="img-fluid rounded-start" alt="Kawasan">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">السباحة مع قرش الحوت والتنزه في شلالات كاواسان (يوم كامل)</h5>
+                        <p class="card-text">ستجعلك هذه المغامرة تقدر جمال الطبيعة من السباحة مع أسماك قرش الحوت
+                            والمساحات الخضراء المحيطة على طول شلالات Kawasan وحولها.
+                        </p>
+                        <a href="{% url 'kawasan_ar' %}" class="btn btn-info">المزيد...</a>
+                        <a href="{% url 'contact_ar' %}" class="btn btn-info">تواصل معنا</a>
+                    </div>
+                </div>
+                <div class="col-md-4 pt-1">
+                    <img src="{% static 'imgs/offers/safari6.jpg' %}" class="img-fluid rounded-start" alt="Safari">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">رحلة سيبو سفاري و متنزه المغامرة (يوم كامل)</h5>
+                        <p class="card-text"> استكشف عجائب البرية في حزمة رحلات السفاري و حديقة المغامرات . في الجزء الشمالي من سيبو ، توجد أكبر حديقة
+                            حيوانات في الفلبين. Cebu Safari and Adventure Park هي حديقة سفاري رئيسية تعرض حوالي 111 نوعًا من
+                            الحيوانات في الوقت الحالي.
+                        </p>
+                        <a href="{% url 'safari_ar' %}" class="btn btn-info">المزيد...</a>
+                        <a href="{% url 'contact_ar' %}" class="btn btn-info">تواصل معنا</a>
+                    </div>
+                </div>
+                <div class="col-md-4 pt-1">
+                    <img src="{% static 'imgs/offers/hopping7.jpg' %}" class="img-fluid rounded-start" alt="Hopping">
+                </div>
+                <div class="col-md-8">
+                    <div class="card-body">
+                        <h5 class="card-title">زيارة الجزر السياحية مع وجبة غداء (يوم كامل)</h5>
+                        <p class="card-text">خذ يومًا لاستكشاف جزر سيبو الجميلة في هذه الجولة من مدينة سيبو. قفز من جزيرة إلى أخرى في قاربنا المريح ،
+                            مع متسع من الوقت للاستمتاع بالمناظر الطبيعية الجميلة والمياه الصافية والطعام المحلي اللذيذ.
+                        </p>
+                        <a href="{% url 'hopping_ar' %}" class="btn btn-info">المزيد...</a>
+                        <a href="{% url 'contact_ar' %}" class="btn btn-info">توصل معنا</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!--    end of trips section-->
+
+
+{% endblock %}

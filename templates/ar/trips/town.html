@@ -1,0 +1,255 @@
+{% extends 'ar/base/sub-base.html' %}
+
+{% load static %}
+
+{% block title %} رحلة مدينة سيبو {% endblock %}
+
+{% block content %}
+
+<style>
+
+
+</style>
+
+<div
+    style="text-align:center;padding:50px;width:100%;background-image:url({% static 'imgs/offers/cebu1.jpg' %});margin-bottom:50px;
+background-repeat:no-repeat;background-size:cover;background-position:center;background-attachment:fixed;text-align:center;">
+    <p style="color:black;text-shadow:2px 2px 4px darkred;padding:25px;font-weight:900;font-size:2rem;">Cebu City
+        Tour</p>
+    <div style="padding:30px;margin:0 auto;width:90%;padding:5px;background-color:rgba(256, 256, 256, 0.5);
+    border-radius:10px;text-shadow:0 1px 2px black;box-shadow:0px 2px 5px -1px black;">
+        <p style="padding:20px;text-align:left;font-size:1.4rem;">
+            <b> اماكن سوف تزوروها : </b> <br>
+            - Sirao Flower Garden (سيراو حديقة الزهور).<br>
+            - Temple of Leah (معبد ليا). <br>
+            - Taoist Temple (معبد تاويست). <br>
+            - Ancestral House (منزل انسيسترال التاريخي). <br>
+            - Cebu Heritage monument (نصب سيبو التراثي). <br>
+            - Magellans Cross (صليب ماجلان). <br>
+            - Sto. Niño Church (كنيسة القديس نينيو). <br>
+            - Fort San Pedro (حصن سان بيدرو). <br>
+            - CCLEX Longest Bridge (جسر سيبو الكبير). <br>
+            - 10.000 Roses (حديقة 10.000 وردة جوري). <br>
+
+        </p>
+    </div>
+</div>
+
+<div class="container-gallery">
+
+    <div class="feature">
+        <div class="featured-item image-holder r-3-2 transition"></div>
+    </div>
+
+    <div class="gallery-wrapper">
+        <div class="gallery">
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 active transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+            <div class="item-wrapper-gallery">
+                <div class="gallery-item image-holder r-3-2 transition"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="controls">
+        <button class="move-btn left">&larr;</button>
+        <button class="move-btn right">&rarr;</button>
+    </div>
+
+</div>
+
+
+<div style="padding:100px;font-size:1.2rem;">
+
+    اكتشف أقدم مدينة استعمارية في الفلبين من خلال تجربة سحر مدينة سيبو القديمة وأشهر معالمها ، صليب ماجلان.
+    <br>
+
+
+    تم زرع الصليب لأول مرة في عام 1521 للإشارة إلى المكان الذي تم فيه تعميد الفلبينيين الأصليين في العقيدة الكاثوليكية.
+    المحطة التالية هي قلعة سان بيدرو ، التي كانت نواة أول مستوطنة إسبانية في البلاد وتحولت الآن إلى حديقة متحف.
+
+    <br>
+    ستستمر الجولة بعد ذلك في زيارة كنيسة سانت نينو ونصب هرتيجيت التذكاري ومنزل ياب سان دييغو ومعبد الطاوي (مغلق مؤقتًا)
+    في بيفرلي هيلز. ستكون المحطة الأخيرة هي متاجر الحرف اليدوية من أجل الاستمتاع بالتسوق.
+
+</div>
+
+<div style="padding:0 100px;text-align:left;">
+    <p style="font-size:1.5rem;font-weight:bold;">الاسعار</p>
+    <table>
+        <tr>
+            <th>الاشخاص</th>
+            <th>السعر</th>
+        </tr>
+        <tr>
+            <td>شخص بالغ</td>
+            <td>₱5000</td>
+        </tr>
+        <tr>
+            <td>شخصان</td>
+            <td>₱7000</td>
+        </tr>
+        <tr>
+            <td>اكثر من شخصان</td>
+            <td>+₱1000</td>
+        </tr>
+    </table>
+    <a href="{% url 'contact_ar' %}" class="btn-sky">احجز الان</a>
+</div>
+
+<script>
+    var gallery = document.querySelector('.gallery');
+    var galleryItems = document.querySelectorAll('.gallery-item');
+    var numOfItems = gallery.children.length;
+    var itemWidth = 23; // percent: as set in css
+
+    var featured = document.querySelector('.featured-item');
+
+    var leftBtn = document.querySelector('.move-btn.left');
+    var rightBtn = document.querySelector('.move-btn.right');
+    var leftInterval;
+    var rightInterval;
+
+    var scrollRate = 0.2;
+    var left;
+
+    function selectItem(e) {
+        if (e.target.classList.contains('active')) return;
+
+        featured.style.backgroundImage = e.target.style.backgroundImage;
+
+        for (var i = 0; i < galleryItems.length; i++) {
+            if (galleryItems[i].classList.contains('active'))
+                galleryItems[i].classList.remove('active');
+        }
+
+        e.target.classList.add('active');
+    }
+
+    function galleryWrapLeft() {
+        var first = gallery.children[0];
+        gallery.removeChild(first);
+        gallery.style.left = -itemWidth + '%';
+        gallery.appendChild(first);
+        gallery.style.left = '0%';
+    }
+
+    function galleryWrapRight() {
+        var last = gallery.children[gallery.children.length - 1];
+        gallery.removeChild(last);
+        gallery.insertBefore(last, gallery.children[0]);
+        gallery.style.left = '-23%';
+    }
+
+    function moveLeft() {
+        left = left || 0;
+
+        leftInterval = setInterval(function () {
+            gallery.style.left = left + '%';
+
+            if (left > -itemWidth) {
+                left -= scrollRate;
+            } else {
+                left = 0;
+                galleryWrapLeft();
+            }
+        }, 1);
+    }
+
+    function moveRight() {
+        //Make sure there is element to the leftd
+        if (left > -itemWidth && left < 0) {
+            left = left - itemWidth;
+
+            var last = gallery.children[gallery.children.length - 1];
+            gallery.removeChild(last);
+            gallery.style.left = left + '%';
+            gallery.insertBefore(last, gallery.children[0]);
+        }
+
+        left = left || 0;
+
+        leftInterval = setInterval(function () {
+            gallery.style.left = left + '%';
+
+            if (left < 0) {
+                left += scrollRate;
+            } else {
+                left = -itemWidth;
+                galleryWrapRight();
+            }
+        }, 1);
+    }
+
+    function stopMovement() {
+        clearInterval(leftInterval);
+        clearInterval(rightInterval);
+    }
+
+    leftBtn.addEventListener('mouseenter', moveLeft);
+    leftBtn.addEventListener('mouseleave', stopMovement);
+    rightBtn.addEventListener('mouseenter', moveRight);
+    rightBtn.addEventListener('mouseleave', stopMovement);
+
+
+    //Start this baby up
+    (function init() {
+        var images = [
+            "{% static 'imgs/offers/city1.jpg' %}",
+            "{% static 'imgs/offers/city2.jpg' %}",
+            "{% static 'imgs/offers/city3.jpg' %}",
+            "{% static 'imgs/offers/city4.jpg' %}",
+            "{% static 'imgs/offers/city5.jpg' %}",
+            "{% static 'imgs/offers/city6.jpg' %}",
+            "{% static 'imgs/offers/city7.jpg' %}",
+            "{% static 'imgs/offers/city8.jpg' %}",
+            "{% static 'imgs/offers/city9.jpg' %}",
+            "{% static 'imgs/offers/city10.jpg' %}",
+            "{% static 'imgs/offers/city11.jpg' %}",
+            "{% static 'imgs/offers/city12.jpg' %}",
+            "{% static 'imgs/offers/city13.jpg' %}",
+            "{% static 'imgs/offers/city14.jpg' %}",
+            "{% static 'imgs/offers/city15.jpg' %}",
+            "{% static 'imgs/offers/city16.jpg' %}",
+            "{% static 'imgs/offers/city17.jpg' %}",
+        ];
+
+        //Set Initial Featured Image
+        featured.style.backgroundImage = 'url(' + images[0] + ')';
+
+        //Set Images for Gallery and Add Event Listeners
+        for (var i = 0; i < galleryItems.length; i++) {
+            galleryItems[i].style.backgroundImage = 'url(' + images[i] + ')';
+            galleryItems[i].addEventListener('click', selectItem);
+        }
+    })();
+
+
+</script>
+
+{% endblock %}

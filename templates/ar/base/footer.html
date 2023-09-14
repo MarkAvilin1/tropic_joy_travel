@@ -1,0 +1,73 @@
+{% load static %}
+
+
+<section class="jumbotron bg-dark text-white" style="width:100%; padding:0;margin:0;" dir="rtl">
+    <div class="container">
+        <div class="footer">
+            <div class="footer-lists">
+                <ul class="list">
+                    <li class="list-head">
+                        <h6 class="font-weight-bold">عنا</h6>
+                    </li>
+                    <li class="list-body">
+                        <a href="#" class="logo">
+                            <img src="{% static 'imgs/logo/palms.png' %}"
+                                 alt="Tropic Joy Travel">
+                            <h6>تروبيك جوي تريفل</h6>
+                        </a>
+                        <p> 
+                            تروبيك جوي تريفل للخدمات السياحية , لدينا فريق محترف لجعل رحلتكم مثالية ولاتنسى .<br>
+                        </p>
+                        <p class="mt-3">
+                            Copyright
+                            <script>document.write(new Date().getFullYear())</script> &copy; <a
+                                class="d-inline text-primary" href="https://markavilin1.github.io/portfolio/">Avilin Web
+                            Services</a>
+                        </p>
+                    </li>
+                </ul>
+                <ul class="list">
+                    <li class="list-head">
+                        <h6 class="font-weight-bold">روابط مفيدة</h6>
+                    </li>
+                    <li class="list-body">
+                        <div class="row">
+                            <div class="col">
+                                <a href="#about">عنا</a>
+                                <a href="#service">Service</a>
+                                <a href="{% url 'contact_ar' %}">اتصل بنا</a>
+                                <a href="{% url 'trips_ar' %}">رحلاتنا</a>
+                            </div>
+                            <div class="col">
+                                <a href="{% url 'city_ar' %}">رحلة مدينة سيبو</a>
+                                <a href="{% url 'safari_ar' %}">سيبو سفاري</a>
+                                <a href="#own_trip">خطط رحلتك الخاصة</a>
+                                <a href="{% url 'kawasan_ar' %}">اوسلوب وكاواسان</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list">
+                    <li class="list-head">
+                        <h6 class="font-weight-bold">معلومات الاتصال</h6>
+                    </li>
+                    <li class="list-body">
+                        <p>تواصلوا معنا وسوف نرد عليكم باسرع وقت ممكن</p>
+                        <p><img src="{% static 'imgs/logo/address.png' %}" alt="Address"
+                                style="max-width:20px;max-height:20px"> الفلبين , سيبو</p>
+                        <a href="emailto:tropicjoytravel@gmail.com"><img src="{% static 'imgs/logo/email.png' %}"
+                         alt="Email" style="max-width:20px;max-height:20px"> tropicjoytravel@gmail.com</a>
+
+                        <a href="https://wa.me/message/MBTZZNPUOPJTJ1"><img src="{% static 'imgs/logo/wa.png' %}"
+                         alt="Email" style="max-width:20px;max-height:20px"> +63 939 695 9716</a>
+
+                        <a href="https://www.facebook.com/profile.php?id=100090552585190" class="link"><img
+                                src="{% static 'imgs/logo/fb.png' %}" alt="Facebook"
+                                style="max-width:20px;max-height:20px"> تروبيك جوي تريفل</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

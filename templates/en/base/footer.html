@@ -1,0 +1,73 @@
+{% load static %}
+
+
+<section class="jumbotron bg-dark text-white" style="width:100%; padding:0;margin:0;">
+    <div class="container">
+        <div class="footer">
+            <div class="footer-lists">
+                <ul class="list">
+                    <li class="list-head">
+                        <h6 class="font-weight-bold">ABOUT US</h6>
+                    </li>
+                    <li class="list-body">
+                        <a href="#" class="logo">
+                            <img src="{% static 'imgs/logo/palms.png' %}"
+                                 alt="Tropic Joy Travel">
+                            <h6>Tropic Joy Travel</h6>
+                        </a>
+                        <p>Tropic Joy Travel for tourism services, we have a talented people who can make your vacation
+                            an ideal. <br>
+                        </p>
+                        <p class="mt-3">
+                            Copyright
+                            <script>document.write(new Date().getFullYear())</script> &copy; <a
+                                class="d-inline text-primary" href="https://markavilin1.github.io/portfolio/">Avilin Web
+                            Services</a>
+                        </p>
+                    </li>
+                </ul>
+                <ul class="list">
+                    <li class="list-head">
+                        <h6 class="font-weight-bold">USEFUL LINKS</h6>
+                    </li>
+                    <li class="list-body">
+                        <div class="row">
+                            <div class="col">
+                                <a href="#about">About</a>
+                                <a href="#service">Service</a>
+                                <a href="{% url 'contact_en' %}">Contact Us</a>
+                                <a href="{% url 'trips_en' %}">Our Trips</a>
+                            </div>
+                            <div class="col">
+                                <a href="{% url 'city_en' %}">City Tour</a>
+                                <a href="{% url 'safari_en' %}">Cebu Safari</a>
+                                <a href="#own_trip">Plan Your Trip</a>
+                                <a href="{% url 'kawasan_en' %}">Oslob & Kawasan</a>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+                <ul class="list">
+                    <li class="list-head">
+                        <h6 class="font-weight-bold">CONTACT INFO</h6>
+                    </li>
+                    <li class="list-body">
+                        <p>Contact us and we'll get back to you ASAP.</p>
+                        <p><img src="{% static 'imgs/logo/address.png' %}" alt="Address"
+                                style="max-width:20px;max-height:20px"> The Philippines, Cebu</p>
+                        <a href="emailto:tropicjoytravel@gmail.com"><img src="{% static 'imgs/logo/email.png' %}"
+                         alt="Email" style="max-width:20px;max-height:20px"> tropicjoytravel@gmail.com</a>
+
+                        <a href="https://wa.me/message/MBTZZNPUOPJTJ1"><img src="{% static 'imgs/logo/wa.png' %}"
+                         alt="Email" style="max-width:20px;max-height:20px"> +63 939 695 9716</a>
+
+                        <a href="https://www.facebook.com/profile.php?id=100090552585190" class="link"><img
+                                src="{% static 'imgs/logo/fb.png' %}" alt="Facebook"
+                                style="max-width:20px;max-height:20px"> Tropic Joy Travel</a>
+
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>

@@ -1,0 +1,80 @@
+{% extends 'en/base/base.html' %}
+
+{% load static %}
+
+{% block title %} Trips {% endblock %}
+
+{% block content %}
+
+<section id="trips" class="jumbotron bg-white mt-5">
+
+        <div class="container">
+            <h2>Choose Your Trip</h2>
+
+            <div class="card mb-3" style="max-width:100%;">
+                <div class="row g-0">
+                    <div class="col-md-4">
+                        <img src="{% static 'imgs/offers/cebu.jpg' %}" class="img-fluid rounded-start" alt="City Tour">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Cebu City Tour (Full Day)</h5>
+                            <p class="card-text">This tour brings you to various heritage sites and hillside.
+                                The Cebu City Tour sample itinerary includes visiting notable spots that have
+                                defined Cebu’s history in the morning. Then, in the afternoon, the Cebu City
+                                tour package consists of moving to the top part of Cebu.
+                            </p>
+                            <a href="{% url 'city_en' %}" class="btn btn-info">More details</a>
+                            <a href="{% url 'contact_en' %}" class="btn btn-info">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pt-1">
+                        <img src="{% static 'imgs/offers/kawasan1.jpg' %}" class="img-fluid rounded-start" alt="Kawasan">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Whale Shark Swimming & Kawasan Falls Canyoneering (Full Day)</h5>
+                            <p class="card-text">This adventure will make you appreciate the beauty of nature from
+                                swimming with the whale sharks and the greenery of the surroundings along and around
+                                Kawasan falls.
+                            </p>
+                            <a href="{% url 'kawasan_en' %}" class="btn btn-info">More details</a>
+                            <a href="{% url 'contact_en' %}" class="btn btn-info">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pt-1">
+                        <img src="{% static 'imgs/offers/safari6.jpg' %}" class="img-fluid rounded-start" alt="Safari">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Cebu Safari and Adventure Park (Full Day)</h5>
+                            <p class="card-text">This tour brings you to various heritage sites and hillside.
+                                The Cebu City Tour sample itinerary includes visiting notable spots that have
+                                defined Cebu’s history in the morning. Then, in the afternoon, the Cebu City
+                                tour package consists of moving to the top part of Cebu.
+                            </p>
+                            <a href="{% url 'safari_en' %}" class="btn btn-info">More details</a>
+                            <a href="{% url 'contact_en' %}" class="btn btn-info">Contact Us</a>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pt-1">
+                        <img src="{% static 'imgs/offers/hopping7.jpg' %}" class="img-fluid rounded-start" alt="Hopping">
+                    </div>
+                    <div class="col-md-8">
+                        <div class="card-body">
+                            <h5 class="card-title">Island Hopping with Lunch (Full Day)</h5>
+                            <p class="card-text">This tour brings you to various heritage sites and hillside.
+                                The Cebu City Tour sample itinerary includes visiting notable spots that have
+                                defined Cebu’s history in the morning. Then, in the afternoon, the Cebu City
+                                tour package consists of moving to the top part of Cebu.
+                            </p>
+                            <a href="{% url 'hopping_en' %}" class="btn btn-info">More details</a>
+                            <a href="{% url 'contact_en' %}" class="btn btn-info">Contact Us</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+{% endblock %}

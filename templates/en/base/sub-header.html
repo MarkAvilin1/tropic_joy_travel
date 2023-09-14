@@ -1,0 +1,58 @@
+{% load static %}
+
+<style>
+ul li ul {
+  color:black;
+  background: rgba(56, 39, 6, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  max-width: 9rem;
+  position: absolute;
+  transition: all 0.8s ease;
+  right: 0;
+  margin-right:0px;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+</style>
+
+<!-- Navigater -->
+  <nav id="navbar">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <img src="{% static 'imgs/logo/menu.jpg' %}" alt="Tropic Joy Travel" style="max-width:40px; max-height:30px;">
+    </label>
+    <label class="logo"><a class="navbar-brand" href="/"><img src="{% static 'imgs/logo/joyLogo.png' %}" alt="LOGO"> </a></label>
+    <ul>
+        <li>
+          <a href="{% url 'home' %}">Home</a>
+        </li>
+        <li>
+          <a href="{% url 'trips_en' %}">Our Trips</a>
+        </li>
+        <li>
+          <a href="{% url 'other_en' %}">Other Services</a>
+        </li>
+        <li>
+          <a href="{% url 'contact_en' %}">Contact me</a>
+        </li>
+        <li>
+            <a href="#">Languages</a>
+            <ul class="dropdown">
+                <li><a href="{% url 'home_ar' %}">Arabic</a></li>
+                <li><a href="{% url 'home' %}">English</a></li>
+            </ul>
+        </li>
+      </ul>
+  </nav>

@@ -1,0 +1,61 @@
+{% load static %}
+
+<style>
+ul li ul {
+  color:black;
+  background: rgba(56, 39, 6, 0.3);
+  visibility: hidden;
+  opacity: 0;
+  max-width: 5rem;
+  position: absolute;
+  transition: all 0.8s ease;
+  right: 0;
+  margin-right:0px;
+  display: none;
+}
+
+ul li:hover > ul,
+ul li ul:hover {
+  visibility: visible;
+  opacity: 1;
+  display: block;
+}
+
+ul li ul li {
+  clear: both;
+  width: 100%;
+}
+
+</style>
+
+<!-- Navigater -->
+<nav id="navbar" dir="rtl">
+    <input type="checkbox" id="check">
+    <label for="check" class="checkbtn">
+        <img src="{% static 'imgs/logo/menu.jpg' %}" alt="Tropic Joy Travel" style="max-width:40px; max-height:30px;">
+    </label>
+    <label class="logo"><a class="navbar-brand" href="/"><img src="{% static 'imgs/logo/joyLogo.png' %}" alt="LOGO">
+    </a></label>
+    <ul>
+        <li>
+            <a href="#">اللغات</a>
+            <ul class="dropdown">
+                <li><a href="{% url 'home' %}">الانكليزية</a></li>
+                <li><a href="{% url 'home_ar' %}">العربية</a></li>
+            </ul>
+        </li>
+        <li>
+            <a href="{% url 'home_ar' %}">الرئيسية</a>
+        </li>
+        <li>
+            <a href="{% url 'trips_ar' %}">رحلاتنا</a>
+        </li>
+        <li>
+            <a href="{% url 'other_ar' %}">خدمات اخرى</a>
+        </li>
+        <li>
+            <a href="{% url 'contact_ar' %}">اتصل بنا</a>
+        </li>
+
+    </ul>
+</nav>

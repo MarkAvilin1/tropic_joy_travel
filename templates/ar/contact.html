@@ -1,0 +1,81 @@
+{% extends 'ar/base/base.html' %}
+{% load static %}
+{% block title %}تواصل معنا{% endblock %}
+{% block content %}
+
+<!-- Contact Section -->
+<section id="contact" dir="rtl">
+    <div class="container mt-5">
+        <div class="contact-card">
+            <div class="infos">
+                <h6 class="section-subtitle">نحن هنا</h6>
+                <h6 class="section-title mb-4">تواصل معنا</h6>
+
+                <div class="item">
+                    <img src="{% static 'imgs/logo/address.png' %}" alt="Address"
+                         style="max-width:30px;max-height:30px;margin-right:15px;">
+                    <div class="">
+                        <h5>الموقع</h5>
+                        <p> الفلبين , سيبو</p>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'imgs/logo/wa.png' %}" alt="Address" style="max-width:30px;max-height:30px;margin-right:15px;">
+                    <div>
+                        <h5>رقم الهاتف</h5>
+                        <a href="https://wa.me/message/MBTZZNPUOPJTJ1 "><p>+63 939 695 9716</p></a>
+                    </div>
+                </div>
+                <div class="item">
+                    <img src="{% static 'imgs/logo/email.png' %}" alt="Address" style="max-width:30px;max-height:30px;margin-right:15px;">
+                    <div class="mb-0">
+                        <h5>البريد الالكتروني</h5>
+                        <a href="emailto:tropicjoytravel@gmail.com"><p>tropicjoytravel@gmail.com</p></a>
+                    </div>
+                </div>
+            </div>
+            <div class="form">
+                <h6 class="section-subtitle">متوافرون 24/7</h6>
+                {% if success_msg != '' %}
+                <div class="alert alert-success p-2" id="success" role="alert">
+                    <p>{{ success_msg }}</p>
+                </div>
+                {% endif %}
+                <h6 class="section-title mb-4">اكتب لنا</h6>
+                <form method="post" action="{% url 'contact_ar' %}">
+                    {% csrf_token %}
+                    <div class="form-group">
+                        <input type="text" class="form-control form-control-lg" id="exampleInputPassword1"
+                               placeholder="الالسم الكامل" name="name" required>
+                    </div>
+                    <div class="form-group">
+                        <input type="email" class="form-control form-control-lg" id="exampleInputEmail1"
+                               aria-describedby="emailHelp" placeholder="البريد الالكتروني" name="email"
+                               required>
+                    </div>
+                    <div class="form-group">
+                        <input type="tel" class="form-control form-control-lg" id="exampleInputEmail2"
+                               aria-describedby="emailHelp" placeholder="رقم الواتساب" name="phone">
+                    </div>
+                    <div class="form-group">
+                        <textarea name="message" id="" cols="30" rows="7" class="form-control form-control-lg"
+                                  placeholder="رسالتك"></textarea>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block btn-lg mt-3">ارسال</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Section -->
+
+
+<script>
+      setTimeout(() => {
+      const box = document.querySelector('.alert-success');
+      box.style.display = 'none';
+    }, 10000);
+</script>
+
+
+{% endblock %}

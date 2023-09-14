@@ -1,0 +1,44 @@
+{% load static %}
+
+<!-- Page Navigation -->
+<nav class="navbar custom-navbar navbar-expand-lg navbar-dark" data-spy="affix" data-offset-top="20"
+>
+    <div class="container">
+        <a class="navbar-brand" href="{% url 'home' %}">
+            <img src="{% static 'imgs/logo/joyLogo.png' %}" alt="Tropic Joy Travel">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'home' %}">Главная</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">О Нас</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#service">Наши Услуги</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{% url 'contact_en' %}">Контакты</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown"
+                       aria-haspopup="true" aria-expanded="false">
+                        Языки
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{% url 'home' %}">English</a>
+                        <a href="{% url 'home_ru' %}">Русский</a>
+                        <a class="dropdown-item" href="{% url 'home_ar' %}">Arabic</a>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+<!-- End Of Page Navigation -->

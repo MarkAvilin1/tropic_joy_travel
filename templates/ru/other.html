@@ -1,0 +1,33 @@
+{% extends 'en/base/sub-base.html' %}
+
+{% load static %}
+
+{% block title %} Trips {% endblock %}
+
+{% block content %}
+
+<div style="text-align:center;padding:50px;width:100%;background-image:url({% static 'imgs/offers/cebu1.jpg' %});margin-bottom:50px;
+background-repeat:no-repeat;background-size:cover;background-position:center;background-attachment:fixed;text-align:center;">
+    <p style="color:black;text-shadow:2px 2px 4px white;padding:25px;font-weight:900;font-size:2rem;">Other Services</p>
+    <div style="padding:30px;margin:0 auto;width:90%;padding:5px;background-color:rgba(256, 256, 256, 0.5);
+    border-radius:10px;text-shadow:0 1px 2px black;box-shadow:0px 2px 5px -1px black;">
+        <p style="padding:20px;text-align:left;font-size:1.4rem;">
+            <b> It is a privet services, you can just contact us and tell about what you need!</b>
+        </p>
+    </div>
+</div>
+
+<div style="padding:100px;" class="other">
+<h1></h1>
+<h2>Our Other Services</h2>
+<p>- Help to rent for short and long term.</p>
+<p>- Help with translation, we provided 4 languages (Tagalog, English, Russian, Arabic).</p>
+<p>- We do tourist invitation.</p>
+<p>- Help with visa inside the Philippines.</p>
+<p>- Help with business and investment.</p>
+<p style="margin-bottom:30px;">- Any other consultation.</p>
+
+    <a href="{% url 'contact_en' %}"  class="btn-sky">Contact Us</a>
+
+</div>
+{% endblock %}
